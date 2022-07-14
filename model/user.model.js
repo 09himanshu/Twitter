@@ -18,6 +18,9 @@ const User = new mongoose.Schema({
     phone: {
         type: String,
         required: true,
+    },
+    follower: {
+        type: []
     }
 })
 
