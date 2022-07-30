@@ -17,6 +17,8 @@ mongoose.connect(config.db, () => {
 
 // Routes
 require('./routes/auth.routes')(app);
+require('./routes/tweet.routes')(app);
+require('./routes/follow_following.routes')(app);
 
 // Server connection
 app.listen(config.port, () => {

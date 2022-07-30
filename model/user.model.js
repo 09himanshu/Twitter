@@ -19,8 +19,17 @@ const User = new mongoose.Schema({
         type: String,
         required: true,
     },
-    follower: {
-        type: []
+    followerId: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'follower'
+    },
+    followingId: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'following'
+    },
+    totalTweet: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'tweet'
     }
 })
 
